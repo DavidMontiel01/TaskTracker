@@ -1,8 +1,8 @@
-import Tasks.TaskManagerCmds;
+import Tasks.CommandLineInput;
 
 public class Application {
 
     public static void main(String[] args){
-        TaskManagerCmds.run();
+        CommandLineInput.run();
     }
 }
