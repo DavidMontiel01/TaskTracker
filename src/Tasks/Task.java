@@ -4,15 +4,16 @@ import java.time.LocalDateTime;
 
 public class Task {
     private final int id;
-    private final String description;
+    private String description;
     private final LocalDateTime createdAt;
     private TaskStatus status;
     private LocalDateTime updatedAt;
 
-
+    public static int CURRENT_TASK_NUMBER = 0;
     public Task(int id, String description, LocalDateTime timeCreated){
         this.id = id;
         this.description = description;
+        this.status = TaskStatus.TODO;
         this.createdAt = timeCreated;
         updatedAt = createdAt;
     }
@@ -37,6 +38,9 @@ public class Task {
         return updatedAt;
     }
 
+    public void setDescription(String description){
+        this.description = description;
+    }
     public void setStatus(TaskStatus status){
         this.status = status;
     }
